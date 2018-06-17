@@ -6,7 +6,7 @@
     <!-- list other news -->
     <div class="caption ">
       <div class="row post">
-        <h4><a href="#"><?php echo $value->c_name; ?></a></h4>
+        <h4><a href="index.php?controller=news_detail&id=<?php echo $value->pk_news_id; ?>"><?php echo $value->c_name; ?></a></h4>
         <img src="public/upload/news/<?php echo $value->c_img; ?>" width="120" style="float:left; margin-right:15px;">
         <p><?php echo $value->c_description; ?></p>
       </div>
@@ -18,7 +18,8 @@
 <!-- end other news --> 
 <ul class="pagination pull-right">
   <li class="disabled"><a href="#">Page</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
+  <?php $p=isset($_GET["p"])?$_GET["p"]:0; ?>
+  <?php for ($i=1; $i <= $num_page ; $i++) { ?>
+  <li class="page-item <?php if($i==$p) echo 'active' ?>"><a class="page-link" href="index.php?controller=news&id=<?php echo $_GET["id"] ?>&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+  <?php } ?>
 </ul>
