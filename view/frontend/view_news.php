@@ -6,7 +6,7 @@
     <!-- list other news -->
     <div class="caption ">
       <div class="row post">
-        <h4><a href="index.php?controller=news_detail&id=<?php echo $value->pk_news_id; ?>"><?php echo $value->c_name; ?></a></h4>
+        <h4><a href="news/news_detail/<?php echo $value->pk_news_id; ?>/<?php echo remove_unicode($value->c_name); ?>"><?php echo $value->c_name; ?></a></h4>
         <img src="public/upload/news/<?php echo $value->c_img; ?>" width="120" style="float:left; margin-right:15px;">
         <p><?php echo $value->c_description; ?></p>
       </div>
@@ -20,6 +20,6 @@
   <li class="disabled"><a href="#">Page</a></li>
   <?php $p=isset($_GET["p"])?$_GET["p"]:0; ?>
   <?php for ($i=1; $i <= $num_page ; $i++) { ?>
-  <li class="page-item <?php if($i==$p) echo 'active' ?>"><a class="page-link" href="index.php?controller=news&id=<?php echo $_GET["id"] ?>&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+  <li class="page-item <?php if($i==$p) echo 'active' ?>"><a class="page-link" href="news/news/<?php echo $_GET["id"] ?>/<?php echo $i; ?>"><?php echo $i; ?></a></li>
   <?php } ?>
 </ul>

@@ -30,9 +30,9 @@
       </div>
       <div class="navbar-collapse collapse" id="navbar2">
         <ul class="nav navbar-nav">
-          <li ><a href="index.php">Home</a></li>
+          <li ><a href="home.qhtm">Home</a></li>
           <?php foreach ($arr as $key => $value) { ?>
-          <li ><a href="index.php?controller=news&id=<?php echo $value->pk_category_news_id; ?>&p=1"><?php echo $value->c_name; ?></a></li>
+          <li ><a href="cnews/news/<?php echo $value->pk_category_news_id; ?>/1"><?php echo $value->c_name; ?></a></li>
           <?php } ?>
         </ul>
       </div>

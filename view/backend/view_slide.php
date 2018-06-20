@@ -12,8 +12,7 @@
 					<tr>
 						<th style="width: 150px;">Ảnh</th>
 						<th>Tiêu đề</th>
-						<th style="width: 150px;">Danh Mục</th>
-						<th style="width: 120px;">Tin nổi bật</th>
+						<th style="width: 120px;">Nội dung</th>
 						<th style="width: 150px;"></th>
 					</tr>
 					<?php foreach ($arr as $rows) 
@@ -30,7 +29,6 @@
 							<?php } ?>
 						</td>
 						<td><?php echo $rows->c_name; ?></td>
-						<td><?php echo $rows->c_img; ?></td>
 						<td><?php echo $rows->c_description; ?></td>
 						
 						<td style="text-align: center;">

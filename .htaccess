@@ -1,0 +1,9 @@
+RewriteEngine On
+
+
+RewriteRule ^home.qhtm$  index.php
+RewriteRule ^cnews/(.*)/(.*)/(.*)$  index.php?controller=$1&id=$2&p=$3
+RewriteRule ^news/(.*)/(.*)$  index.php?controller=$1&id=$2
+
+
+

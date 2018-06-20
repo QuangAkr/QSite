@@ -29,7 +29,7 @@
 <body>
 <?php include 'controller/frontend/controller_category_news.php'; ?>
 <div class="row">
-  <?php include 'view_slide.php'; ?>
+  <?php include 'controller/frontend/controller_slide.php'; ?>
   <?php include "controller/frontend/controller_hot_news.php"; ?>
 </div>
 <?php include "controller/frontend/controller_new_news.php"; ?>

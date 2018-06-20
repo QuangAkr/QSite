@@ -2,6 +2,7 @@
 	session_start();
 	include "model/model.php";
 	include "config.php";
+	include 'remove_unicode.php';
 	$controller = isset($_GET["controller"])?$_GET["controller"]:"";
 	if($controller!="")
 		$controller="controller/frontend/controller_$controller.php";
